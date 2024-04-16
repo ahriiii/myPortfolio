@@ -346,7 +346,7 @@ h3 .my-profession{
 
 .home-info p{
     margin-bottom: 70px;
-    font-size: 20px;
+    font-size: 18px;
     color: var(--text-black-700);
 }
 
@@ -368,8 +368,8 @@ h3 .my-profession{
     width: 80px;
     border-bottom: 10px solid var(--skin-color);
     border-right: 10px solid var(--skin-color);
-    right: 20px;
-    bottom: -40px;
+    right: -5px;
+    bottom: -10px;
 }
 
 .home-img::before{
