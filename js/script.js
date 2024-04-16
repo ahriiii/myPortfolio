@@ -71,6 +71,15 @@ function updateNav(element) {
     }
 }
 
+document.querySelector(".p-contact").addEventListener("click", function () {
+
+    const sectionIndex = this.getAttribute("data-section-index");
+    showSection(this);
+    updateNav(this);
+    removeBackSection();
+    addBackSection(sectionIndex);
+})
+
 document.querySelector(".hire-me").addEventListener("click", function () {
 
     const sectionIndex = this.getAttribute("data-section-index");

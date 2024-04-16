@@ -350,6 +350,10 @@ h3 .my-profession{
     color: var(--text-black-700);
 }
 
+.home-info p a{
+    color: var(--skin-color);
+}
+
 .home .home-img{
     flex: 0 0 40%;
     min-width: 40%;
@@ -428,7 +432,7 @@ h3 .my-profession{
 .about .about-content .personal-info .info-item p{
     font-weight: 600;
     padding: 10px 0;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--text-black-900);
     border-bottom: 1px solid var(--bg-black-50);
 }
@@ -851,6 +855,6 @@ h3 .my-profession{
     }
 
     .about .about-content .personal-info .info-item p{
-        font-size: 11px;
+        font-size: 12px;
     }
 }
