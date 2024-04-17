@@ -416,6 +416,7 @@ h3 .my-profession{
     font-size: 16px;
     line-height: 25px;
     color: var(--text-black-700);
+    text-align: justify;
 }
 
 .about .about-content .personal-info{
