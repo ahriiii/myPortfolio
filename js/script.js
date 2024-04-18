@@ -114,35 +114,21 @@ function asideSectionTogglerBtn() {
 // Email Handling
 
 var emailSend = function() {
+    (function () {
+        emailjs.init("y8GQXO75crE-r3zgk");
+    })(); 
+    var params = {
+        name: document.querySelector("#name").value,
+        subject: document.querySelector("#subject").value,
+        email: document.querySelector("#email").value,
+        message: document.querySelector("#message").value
+    };
+    
+    var serviceID = "service_lzjflwo";
+    var templateID = "template_ccw9wzk";
 
-    var userName = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var subject = document.getElementById('subject').value;
-    var message = document.getElementById('message').value;
-
-
-    var messageBody = "Name " + userName +
-        "<br/> Email " + email +
-        "<br/> Message " + message;
-        
-        Email.send({
-            Host : "smtp.elasticemail.com",
-            Username : "ninocchii@gmail.com",
-            Password : "BB4D6FFD6013DE9EF9F51232750848A71F2D",
-            To : 'joshuagranado1@gmail.com',
-            From: "ninocchii@gmail.com",
-            Subject : subject,
-            Body : messageBody
-        }).then(
-            message => {
-                if (message == 'OK') {
-                    swal("Message Sent", "Please wait for reply 😊", "success");
-                } else
-                {
-                    swal("Error", "Something Went Wrong!", "error");
-                }
-            }
-                
-        );
+    emailjs.send(serviceID, templateID, params)
+        .then(res => {
+            swal("Message Sent", "Please wait for reply 😊", "success");
+        }).catch();
 }
-
