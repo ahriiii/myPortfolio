@@ -1,7 +1,11 @@
 /* Type Animation */
 
 var type = new Typed(".typing", {
-    strings: ["","Web Developer", "Gamer", "Noice"],
+    strings: ["", "Virtual Assistant",
+        "Data Entry Clerk",
+        "Pinterest Manager",
+        "Social Media Manager",
+        "Virtual Assistant"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
