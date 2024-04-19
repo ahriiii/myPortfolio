@@ -115,7 +115,7 @@ function asideSectionTogglerBtn() {
 
 var emailSend = function() {
     (function () {
-        emailjs.init("y8GQXO75crE-r3zgk");
+        emailjs.init("OYjXX0F6ivzWjpgTY");
     })(); 
     var params = {
         name: document.querySelector("#name").value,
@@ -124,8 +124,8 @@ var emailSend = function() {
         message: document.querySelector("#message").value
     };
     
-    var serviceID = "service_lzjflwo";
-    var templateID = "template_ccw9wzk";
+    var serviceID = "service_ib7ru8w";
+    var templateID = "template_ndt3v9a";
 
     emailjs.send(serviceID, templateID, params)
         .then(res => {
