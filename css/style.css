@@ -651,6 +651,25 @@ h3 .my-profession{
     line-height: 25px;
 }
 
+.service .service-item .service-item-inner p .read-more-text{
+    display: none;
+}
+
+.service .service-item .service-item-inner p .read-more-text--show{
+    display: inline;
+}
+
+.read-more-btn{
+    color: var(--text-black-900);
+    cursor: pointer;
+}
+
+.read-more-btn:hover{
+    color: var(--text-black-700);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 /* Portfolio */
 
 /* .portfolio .container {

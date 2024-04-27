@@ -132,3 +132,20 @@ var emailSend = function() {
             swal("Message Sent", "Please wait for reply 😊", "success");
         }).catch();
 }
+
+// See More
+
+const card = document.querySelector("#serviceCard");
+
+card.addEventListener("click", event => {
+    const current = event.target,
+        isReadMoreBtn = current.className.includes("read-more-btn");
+    if (!isReadMoreBtn) return;
+
+    const currentText = event.target.parentNode.querySelector(".read-more-text");
+
+    currentText.classList.toggle("read-more-text--show");
+
+    current.textContent = current.textContent.includes("Read More") ?
+        "Read Less" : "Read More";
+})
