@@ -1,9 +1,9 @@
 /* Type Animation */
 
 var type = new Typed(".typing", {
-    strings: ["", "Virtual Assistant",
+    strings: ["", "Personal Assistant",
         "Data Entry Clerk",
-        "Pinterest Manager",
+        "Administrative Support",
         "Social Media Manager",
         "Virtual Assistant"],
     typeSpeed: 100,
@@ -149,3 +149,28 @@ card.addEventListener("click", event => {
     current.textContent = current.textContent.includes("Read More") ?
         "Read Less" : "Read More";
 })
+
+// back and push
+
+let sections = Array.from(document.querySelectorAll('.section'));
+
+function selectSection(id) {
+    sections.forEach(s => {
+        s.classList.toggle('selected', s.id === id);
+    })
+}
+
+sections.forEach(s => {
+    let id = s.id;
+
+    s.addEventListener('click', e => {
+        history.pushState({ id }, `Selected: ${id}`, `./selected = ${id}`)
+        selectSection(id);
+    })
+})
+
+window.addEventListener('popstate', e => {
+    selectSection(e.state.id);
+})
+
+history.replaceState({ id: null }, 'Default State', './')
